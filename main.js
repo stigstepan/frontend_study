@@ -23,10 +23,13 @@ function start() {
 }
 
 function select_item(){
-    if ( list.options[list.selectedIndex].value === "Fibonach") {
-        label_in.maxlength = 5;
-    } else{
-        label_in.maxlength = 100;
+    switch ( list.options[list.selectedIndex].value) {
+        case "Fibonach":{
+            label_in.value = "15";
+        } break;
+        case "Euclid":{
+            label_in.value = "20 32";
+        }  break;
     }
 
 }
@@ -51,16 +54,18 @@ function euclid(a,b){
 }
 
 function fibonach(n){
+    let label_out = document.getElementById('data-out');
 
-    var x = 0, y =1;
-    for(var i = 0; i < n-1; i ++){
-        x = x+y;
+    if (n<2){
+        label_out.value = n; 
+        return;
+    }
+    var x = 0, y = 1;
+    for(var i = 0; i < n; i ++){
+        x = x + y;
         x^=y;
         y^=x;
         x^=y;
     }
-
-    let label_out = document.getElementById('data-out');
-    
     label_out.value = x; 
 }
