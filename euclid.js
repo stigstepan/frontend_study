@@ -1,4 +1,4 @@
-var a = 40, b = 10;
+function euclid(a,b){
     if(a<b) {
         a^=b;
         b^=a;
@@ -11,8 +11,7 @@ var a = 40, b = 10;
         b^=a;
         a^=b;
     }
-
-// ВАШ КОД ЗДЕСЬ 
-
-
-console.log(b); 
+    
+    console.log(b); 
+//    module.exports.euclid = euclid;
+}
