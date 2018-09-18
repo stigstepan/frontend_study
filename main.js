@@ -3,6 +3,8 @@ start_button.addEventListener("click", start);
 var list = document.getElementById('list');
 list.addEventListener("change", select_item);
 var label_in = document.getElementById('data-in');
+// import {euclid} from "./euclid.js";
+// import {fibonach} from "./fibonach";
 
 
 function start() {
@@ -31,41 +33,4 @@ function select_item(){
             label_in.value = "20 32";
         }  break;
     }
-
-}
-
-function euclid(a,b){
-    if(a<b) {
-        a^=b;
-        b^=a;
-        a^=b;
-    }
-    while(a>0){
-        a%=b;
-        if(a===0) break;
-        a^=b;
-        b^=a;
-        a^=b;
-    }
-    
-    let label_out = document.getElementById('data-out');
-    
-    label_out.value = b; 
-}
-
-function fibonach(n){
-    let label_out = document.getElementById('data-out');
-
-    if (n<2){
-        label_out.value = n; 
-        return;
-    }
-    var x = 0, y = 1;
-    for(var i = 0; i < n; i ++){
-        x = x + y;
-        x^=y;
-        y^=x;
-        x^=y;
-    }
-    label_out.value = x; 
 }

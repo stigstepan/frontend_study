@@ -12,6 +12,7 @@ function euclid(a,b){
         a^=b;
     }
     
-    console.log(b); 
-//    module.exports.euclid = euclid;
+    let label_out = document.getElementById('data-out');
+    
+    label_out.value = b; 
 }
