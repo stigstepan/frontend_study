@@ -30,6 +30,9 @@ function select_item(){
         case "Euclid":{
             label_in.value = "20 32";
         }  break;
+        case "Section":{
+            label_in.value = "???";
+        }  break;
     }
 
 }
