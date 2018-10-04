@@ -8,18 +8,18 @@ var label_in = document.getElementById('data-in');
 
 
 function start() {
-    let parseStr = label_in.value.split(' ');
-    for(let i = 0; i< parseStr.length; i++){
-        parseStr[i] = parseInt(parseStr[i]);
-    }
+    
     let alg = list.options[list.selectedIndex].value;
     switch(alg)
     {
         case "Euclid":{
-            euclid(parseStr[0],parseStr[1]);
+            euclid(label_in.value);
         } break;
         case "Fibonach":{
-            fibonach(parseStr[0]);
+            fibonach(label_in.value);
+        } break;
+        case "Segments":{
+            segments(label_in.value);
         } break;
     }
 }
@@ -32,5 +32,8 @@ function select_item(){
         case "Euclid":{
             label_in.value = "20 32";
         }  break;
+        case "Segments":{
+            label_in.value = "4\n4 7\n1 3\n2 5\n5 6"
+        }
     }
 }

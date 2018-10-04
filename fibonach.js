@@ -21,15 +21,17 @@ const memoize = (fn) => {
   }
   
   const fibonach = memoize(
-    (n) => {
+    (data) => {
+        let nums = data.split(' ');
+        n = parseInt(nums[0]);
 
         if (n==1){
             label_out.value = 0; 
-            return;
+            return 0;
         }
         if (n==2){
             label_out.value = 1; 
-            return;
+            return 1;
         }
         var x = 0, y = 1;
         for(var i = 0; i < n-1; i ++){

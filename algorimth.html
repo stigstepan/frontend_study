@@ -2,7 +2,7 @@
 <html>
  <head>
   <meta charset="utf-8">
-  <title>Тег TEXTAREA</title>
+  <title>Алгоритмы</title>
  </head>
  <body>
 
@@ -11,13 +11,13 @@
         <option disabled>Выберите алгоритм</option>
         <option value="Fibonach">Фибоначчи</option>
         <option selected value="Euclid">Евклид</option>
-        <option value="Section">Отрезки(не реализовано)</option>
+        <option value="Segments">Отрезки</option>
     </select></p>
     <p><b>Введите данные для алгоритма:</b></p>
-    <p><input type="text" value = "20 32" size="40" id="data-in"/></p>
+    <p><textarea id="data-in" value='20 32' cols="50" rows="7"></textarea></p>
     <p><input type="submit" value="Запустить" id="data-submit"></p>
     <p><b>ответ:</b></p>
-    <p><input type="text" size="40" id="data-out"/></p>
+    <p><textarea id="data-out" cols="50" rows="7"></textarea></p>
 
 
     <script src="fibonach.js"></script>

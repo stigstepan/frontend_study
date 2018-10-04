@@ -1,4 +1,9 @@
-function euclid(a,b){
+function euclid(data){
+
+    let nums = data.split(' ');
+    a = parseInt(nums[0]);
+    b = parseInt(nums[1]);
+
     if(a<b) {
         a^=b;
         b^=a;
