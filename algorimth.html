@@ -7,16 +7,19 @@
  <body>
 
   
-    <p><select size="4" id="list">
+    <p><select size="5" id="list">
         <option disabled>Выберите алгоритм</option>
-        <option selected value="Fibonach">Фибоначчи</option>
+        <option value="Fibonach">Фибоначчи</option>
         <option value="Euclid">Евклид</option>
         <option value="Segments">Отрезки</option>
+        <option value="Backpack">Рюкзак</option>
     </select></p>
+    <p><b>Описание алгоритма:</b></p>
+    <p><textarea id="help" cols="50" rows="7">Выберите алгоритм из списка выше!</textarea></p>
     <p><b>Введите данные для алгоритма:</b></p>
     <p><textarea id="data-in" cols="50" rows="7">15</textarea></p>
     <p><input type="submit" value="Запустить" id="data-submit"></p>
-    <p><b>ответ:</b></p>
+    <p><b>Ответ:</b></p>
     <p><textarea id="data-out" cols="50" rows="7"></textarea></p>
 
 
@@ -24,6 +27,7 @@
     <script src="segments.js"></script>
     <script src="euclid.js"></script>
     <script src="main.js"></script>
+    <script src="backpack.js"></script>
 
  </body>
 </html>
