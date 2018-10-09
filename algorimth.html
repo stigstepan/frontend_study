@@ -3,9 +3,17 @@
  <head>
   <meta charset="utf-8">
   <title>Алгоритмы</title>
+  <style>
+    input.hr {
+     margin-right: 5px; /* Отступ слева */
+     border: 1px solid #000; /* Рамка вокруг текста */
+     padding: 3px; /* Поля вокруг текста */
+     display: inline;
+    }
+   </style>
  </head>
  <body>
-
+       
   
     <p><select size="5" id="list">
         <option disabled>Выберите алгоритм</option>
@@ -15,12 +23,17 @@
         <option value="Backpack">Рюкзак</option>
     </select></p>
     <p><b>Описание алгоритма:</b></p>
-    <p><textarea id="help" cols="50" rows="7">Выберите алгоритм из списка выше!</textarea></p>
+    <p><textarea readonly = true id="help" cols="50" rows="9">Выберите алгоритм из списка выше!</textarea></p>
     <p><b>Введите данные для алгоритма:</b></p>
-    <p><textarea id="data-in" cols="50" rows="7">15</textarea></p>
-    <p><input type="submit" value="Запустить" id="data-submit"></p>
+    <p><textarea id="data-in" cols="50" rows="7">Здесь будут данные для алгоритмов.</textarea></p>
+    <p><input style="display:none;" type="submit" value="Запустить" id="data-submit"></p>
+    <p>
+        <input style="display:none;" id = "first_mod" type="submit" value="Запустить 1 режим" >
+        <input style="display:none;" id = "second_mod" type="submit" value="Запустить 2 режим">
+    </p>
+    <p></p>
     <p><b>Ответ:</b></p>
-    <p><textarea id="data-out" cols="50" rows="7"></textarea></p>
+    <p><textarea readonly = true id="data-out" cols="50" rows="7"></textarea></p>
 
 
     <script src="fibonach.js"></script>

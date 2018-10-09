@@ -1,15 +1,24 @@
+// start button
 var start_button = document.getElementById("data-submit");
 start_button.addEventListener("click", start); 
+// mode buttons
+var start_1mod_button = document.getElementById("first_mod");
+start_1mod_button.addEventListener("click", start_1mod); 
+var start_2mod_button = document.getElementById("second_mod");
+start_2mod_button.addEventListener("click", start_2mod); 
+// list
 var list = document.getElementById('list');
 list.addEventListener("change", select_item);
+
+
 var label_in = document.getElementById('data-in');
+// var label_out = document.getElementById('data-out');
 var help = document.getElementById('help');
 // import {euclid} from "./euclid.js";
 // import {fibonach} from "./fibonach";
 
 
 function start() {
-    
     let alg = list.options[list.selectedIndex].value;
     switch(alg)
     {
@@ -17,7 +26,8 @@ function start() {
             euclid(label_in.value);
         } break;
         case "Fibonach":{
-            fibonach(label_in.value);
+
+            
         } break;
         case "Segments":{
             segments(label_in.value);
@@ -29,10 +39,13 @@ function start() {
 }
 
 function select_item(){
+    label_out.value = "Нажмите кнопку запуска алгоритма.";
+    enableStartButton(true);
     switch ( list.options[list.selectedIndex].value) {
         case "Fibonach":{
             label_in.value = "15";
-            help.value = "Дано целое число 1≤n≤30, необходимо вычислить n-е число Фибоначчи.";
+            help.value = "1 режим: Дано целое число 1≤n≤30, необходимо вычислить n-е число Фибоначчи.\n2 режим: Дано число 1≤n≤10^7, необходимо найти последнюю цифру n-го числа Фибоначчи.";
+            enableStartButton(false);
         } break;
         case "Euclid":{
             label_in.value = "20 32";
@@ -46,5 +59,25 @@ function select_item(){
             label_in.value = "3 50\n60 20\n100 50\n120 30"
             help.value = "Первая строка содержит количество предметов 1≤n≤10^3\nи вместимость рюкзака 0≤W≤2⋅10^6. \nКаждая из следующих n строк задаёт стоимость 0≤ci≤2⋅10^6\ и объём 0<wi≤2⋅10^6 предмета (n, W, ci, wi— целые числа). \nВыведите максимальную стоимость частей предметов (от каждого предмета можно отделить любую часть, стоимость и объём при этом пропорционально уменьшатся), помещающихся в данный рюкзак, с точностью не менее трёх знаков после запятой.";
         }break;
+    }
+}
+
+function start_1mod() {
+    fibonach(label_in.value, false);
+}
+
+function start_2mod() {
+    fibonach(label_in.value, true);
+}
+
+function enableStartButton(mode){
+    if(!mode){
+        start_1mod_button.style.display = 'inline';
+        start_2mod_button.style.display = 'inline';
+        start_button.style.display = 'none';
+    } else {
+        start_1mod_button.style.display = 'none';
+        start_2mod_button.style.display = 'none';
+        start_button.style.display = 'block';
     }
 }
