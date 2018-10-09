@@ -1,5 +1,33 @@
 let label_out = document.getElementById('data-out');
 
+
+
+
+function fibonach(n,mode){
+    let label_out = document.getElementById('data-out');
+
+    if (n==1){
+        label_out.value = 0; 
+        return;
+    }
+    if (n==2){
+        label_out.value = 1; 
+        return;
+    }
+    var x = 0, y = 1;
+    for(var i = 0; i < n-1; i ++){
+        x = x + y;
+        if (mode) x%=10;
+        x^=y;
+        y^=x;
+        x^=y;
+    }
+    label_out.value = x; 
+}
+
+
+
+
 // const memoize = (fn) => {
 //     let dict = {};
 //     return (...args) => {
@@ -47,25 +75,3 @@ let label_out = document.getElementById('data-out');
 
 
 
-
-function fibonach(n,mode){
-    let label_out = document.getElementById('data-out');
-
-    if (n==1){
-        label_out.value = 0; 
-        return;
-    }
-    if (n==2){
-        label_out.value = 1; 
-        return;
-    }
-    var x = 0, y = 1;
-    for(var i = 0; i < n-1; i ++){
-        x = x + y;
-        if (mode) x%=10;
-        x^=y;
-        y^=x;
-        x^=y;
-    }
-    label_out.value = x; 
-}
