@@ -10,7 +10,7 @@ start_2mod_button.addEventListener("click", start_2mod);
 var list = document.getElementById('list');
 list.addEventListener("change", select_item);
 
-
+let label_out = document.getElementById('data-out');
 var label_in = document.getElementById('data-in');
 // var label_out = document.getElementById('data-out');
 var help = document.getElementById('help');
