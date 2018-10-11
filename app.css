@@ -1,0 +1,32 @@
+
+ body { background: url('..\\frontend_study\\resources\\background.jpg'); }
+
+ .center {
+    width: 60%; 
+    margin: auto; 
+    background: #ffffff; 
+    padding: 40px;
+}
+
+.centerHead {
+    width: 60%; 
+    margin: auto; 
+}   
+.menuItem{
+    margin-right: 5px; /* Отступ слева */
+    padding: 3px; /* Поля вокруг текста */
+    float: right;
+    font-size: 100%;
+    font-family: 'Times New Roman';
+    padding: 5px;
+} 
+
+h1{
+    color: white;
+    font-family:'colonna mt';
+}
+
+.titleIcon{
+    width:200px;
+    min-width: 100px;
+}

@@ -6,6 +6,7 @@ var start_1mod_button = document.getElementById("first_mod");
 start_1mod_button.addEventListener("click", start_1mod); 
 var start_2mod_button = document.getElementById("second_mod");
 start_2mod_button.addEventListener("click", start_2mod); 
+var afterChoosingDiv = document.getElementById("afterChoosing");
 // list
 var list = document.getElementById('list');
 list.addEventListener("change", select_item);
@@ -43,6 +44,7 @@ function start() {
 
 function select_item(){
     label_out.value = "Нажмите кнопку запуска алгоритма.";
+    afterChoosingDiv.style.display = 'block';
     enableStartButton(true);
     switch ( list.options[list.selectedIndex].value) {
         case "Fibonach":{
