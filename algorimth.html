@@ -22,16 +22,15 @@
             <a href="" href="#" onclick="createWin('Site');" class="menuItem">О сайте</a>
         </div>
         <div class="course-description">
-            <h3>Алгоритмы и эффективные вычисления</h3>
+            <h2>Алгоритмы и эффективные вычисления</h2>
             <p>Алгоритмы используются практически во всех областях computer science. На данном сайте пользователь получает возможность:</p>
             <p>— Приобрести первичное понимание задач, с которыми справляются алгоритмы.</p>
             <p>— Воспользоваться Online-сервисом для решения задача с помощью представленных алгоритмов.</p>
-            <p>— .</p>
             <h4>Для кого:</h4>
             <p>Сайт будет полезен всем, кто интересуется computer science и хочет понимать принципы работы алгоритмов, а также пользоваться готовыми.</p>
-            <p>Бла бла бла</p>
         </div>
         <div>
+            <h2>Выберите алгоритм</h2>
             <select size="6" id="list" style="margin:auto;">
                 <option disabled>Выбор алгоритма</option>
                 <option value="Fibonach">Фибоначчи</option>
@@ -43,13 +42,12 @@
         </div>
         <div style="display:none;" id='afterChoosing'>
             <div>
-                <h2><b>Название алгоритма:</b></h2>
-                <h4>Описание алгоритма</h4>
-                <textarea readonly = true id="help" cols="50" rows="9">Выберите алгоритм из списка выше!</textarea>
+                <h2 id="algoritm_name">Название алгоритма:</h2>
+                <h4 id="about_algoritm">Описание алгоритма</h4>
             </div>
             <div>
                 <h4>Поле ввода:</h4>
-                <textarea id="data-in" cols="50" rows="7">Здесь будут данные для алгоритмов.</textarea>
+                <textarea id="data-in" cols="50" rows="7"></textarea>
             </div>
             <div>
                 <input style="display:none;" type="submit" value="Запустить" id="data-submit">
