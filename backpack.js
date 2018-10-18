@@ -42,9 +42,9 @@ function backpack(data){
         
         let label_out = document.getElementById('data-out');
         
-        label_out.value = genC.toFixed(3);
+        label_out.innerHTML = genC.toFixed(3);
     } catch(e){
-        label_out.value = "Некорректный ввод.";
+        label_out.innerHTML = "Некорректный ввод.";
         return;
     }
 }

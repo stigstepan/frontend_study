@@ -8,7 +8,7 @@ function terms(data){
         var sum = 0;
         
         if(n <3){
-            label_out.value = "1\n"+n;
+            label_out.innerHTML = "1<br \/>"+n;
             return;
         }
         
@@ -22,11 +22,11 @@ function terms(data){
             sum+=i;
         }
         
-        label_out.value = terms.length + "\n";
+        label_out.innerHTML = terms.length + "<br \/>";
         for (var j = 0; j<terms.length ; j++)
-            label_out.value += terms[j]+" ";
+            label_out.innerHTML += terms[j]+" ";
         } catch(e){
-            label_out.value = "Некорректный ввод.";
+            label_out.innerHTML = "Некорректный ввод.";
             return;
         }
 }

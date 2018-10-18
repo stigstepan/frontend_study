@@ -25,12 +25,12 @@ function segments(data){
                     dot.push(sections[i][1]);
                 }
         }
-        label_out.value = dot.length+'\n';
+        label_out.innerHTML = dot.length+'<br \/>';
 
         for (let i = 0; i < dot.length; i++)
-            label_out.value += dot[i] + ' '; 
+            label_out.innerHTML += dot[i] + ' '; 
     } catch(e){
-        label_out.value = "Некорректный ввод.";
+        label_out.innerHTML = "Некорректный ввод.";
         return;
     }
     

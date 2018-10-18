@@ -41,7 +41,7 @@ function start() {
 }
 
 function select_item(){
-    label_out.value = "Нажмите кнопку запуска алгоритма.";
+    label_out.innerHTML = "Нажмите кнопку запуска алгоритма.";
     afterChoosingDiv.style.display = 'block';
     enableStartButton(true);
     switch ( list.options[list.selectedIndex].value) {

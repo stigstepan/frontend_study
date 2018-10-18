@@ -29,9 +29,9 @@
             <h4>Для кого:</h4>
             <p>Сайт будет полезен всем, кто интересуется computer science и хочет понимать принципы работы алгоритмов, а также пользоваться готовыми.</p>
         </div>
-        <div>
-            <h2>Выберите алгоритм</h2>
-            <select size="6" id="list" style="margin:auto;">
+        <div style = "text-align: center;">
+            <h2 >Выберите алгоритм</h2>
+            <select size="6" id="list" style="width:50%;">
                 <option disabled>Выбор алгоритма</option>
                 <option value="Fibonach">Фибоначчи</option>
                 <option value="Euclid">Евклид</option>
@@ -42,23 +42,21 @@
         </div>
         <div style="display:none;" id='afterChoosing'>
             <div>
-                <h2 id="algoritm_name">Название алгоритма:</h2>
-                <h4 id="about_algoritm">Описание алгоритма</h4>
+                <div class="input_start">
+                    <h3>Поле ввода:</h3>
+                    <textarea id="data-in" style="resize: none; width: 100%;" cols="50" rows="7"></textarea>
+                    <input style="display:none;" type="submit" value="Запустить" id="data-submit">
+                    <input style="display:none;" id = "first_mod" type="submit" value="Запустить 1 режим" >
+                    <input style="display:none;" id = "second_mod" type="submit" value="Запустить 2 режим">
+                </div>
+                <div class="about">
+                    <h2 id="algoritm_name">Название алгоритма:</h2>
+                    <h4 id="about_algoritm">Описание алгоритма</h4>
+                </div>
             </div>
-            <div>
-                <h4>Поле ввода:</h4>
-                <textarea id="data-in" cols="50" rows="7"></textarea>
-            </div>
-            <div>
-                <input style="display:none;" type="submit" value="Запустить" id="data-submit">
-            </div>
-            <div>
-                <input style="display:none;" id = "first_mod" type="submit" value="Запустить 1 режим" >
-                <input style="display:none;" id = "second_mod" type="submit" value="Запустить 2 режим">
-            </div>
-            <div>
-                <h4>Ответ:</h4>
-                <textarea readonly = true id="data-out" cols="50" rows="7"></textarea>
+            <div class="answer">
+                <h2>Ответ:</h2>
+                <h4 id="data-out"></h4>
             </div>
         </div>
     </div>

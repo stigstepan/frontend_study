@@ -7,16 +7,16 @@ function fibonach(data,mode){
         n = parseInt(data);
         if(isNaN(n)) throw "not a number";
         if(!mode && n>30) {
-            label_out.value = "Слишком большое число. Загляните в описание алгоритма.";
+            label_out.innerHTML = "Слишком большое число. Загляните в описание алгоритма.";
             return;
         }
 
         if (n==1){
-            label_out.value = 0; 
+            label_out.innerHTML = 0; 
             return;
         }
         if (n==2){
-            label_out.value = 1; 
+            label_out.innerHTML = 1; 
             return;
         }
         var x = 0, y = 1;
@@ -27,9 +27,9 @@ function fibonach(data,mode){
             y^=x;
             x^=y;
         }
-        label_out.value = x; 
+        label_out.innerHTML = x; 
     } catch(e){
-        label_out.value = "Некорректный ввод.";
+        label_out.innerHTML = "Некорректный ввод.";
         return;
     }
 }
@@ -43,7 +43,7 @@ function fibonach(data,mode){
 //       let n = args[0];
 //       if (n in dict) {
 //         console.log('Восстановлено из словаря', n);
-//         label_out.value = dict[n]; 
+//         label_out.innerHTML = dict[n]; 
 //         return dict[n];
 //       }
 //       else {
@@ -51,7 +51,7 @@ function fibonach(data,mode){
 //         let result = fn(n);
 //         dict[n] = result;
         
-//         label_out.value = result; 
+//         label_out.innerHTML = result; 
 //         return result;
 //       }
 //     }
@@ -63,11 +63,11 @@ function fibonach(data,mode){
   //       n = parseInt(nums[0]);
 
   //       if (n==1){
-  //           label_out.value = 0; 
+  //           label_out.innerHTML = 0; 
   //           return 0;
   //       }
   //       if (n==2){
-  //           label_out.value = 1; 
+  //           label_out.innerHTML = 1; 
   //           return 1;
   //       }
   //       var x = 0, y = 1;
