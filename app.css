@@ -1,5 +1,5 @@
 
- body { background: url('..\\frontend_study\\resources\\background.jpg'); }
+ body { background: url('..\\frontend_study\\resources\\background.jpg') no-repeat; }
 
  .center {
     width: 60%; 
@@ -35,6 +35,7 @@
 .answer{
     width:70%;
     clear: both;
+
 }
 
 h1{

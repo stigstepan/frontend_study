@@ -1,7 +1,6 @@
-
-
-function fibonach(data, mode){
-    var str = data.toString(); 
+var stdin = process.openStdin(); 
+stdin.on('data', function(data){ 
+ var str = data.toString(); 
     var freq = [];
     var fl = false;
     for(var i in str){
@@ -25,6 +24,7 @@ function fibonach(data, mode){
     tree.add('', 'root', tree.traverseBF);
     var len = freq.length;
     for(i = 0; i < len; i++){
+        if(freq.length == 1) break;
         var last = freq.pop();
         var prelast = freq.pop();
         var node = new Node('');
@@ -32,19 +32,12 @@ function fibonach(data, mode){
         nodeA.parent = node;
         var nodeB = new Node(prelast.symbol);
         nodeB.parent = node;
-        node.children.push(nodeA);
-        node.children.push(nodeB);
         freq.push({symbol:'', value:(last.value+prelast.value)});
         freq.sort(compareValue);
-        if(freq.length == 1) {
-            tree._root = node;
-            break;
-        }
     }
 
 console.log(tree); 
-debugger;
-}
+});
 
 function compareValue(wordA, wordB) {
   return wordB.value - wordA.value;
@@ -160,119 +153,3 @@ function findIndex(arr, data) {
 
     return index;
 }
-
-// реализация очереди
-function Queue() {
-    this._oldestIndex = 1;
-    this._newestIndex = 1;
-    this._storage = {};
-}
- 
-Queue.prototype.size = function() {
-    return this._newestIndex - this._oldestIndex;
-};
- 
-Queue.prototype.enqueue = function(data) {
-    this._storage[this._newestIndex] = data;
-    this._newestIndex++;
-};
- 
-Queue.prototype.dequeue = function() {
-    var oldestIndex = this._oldestIndex,
-        newestIndex = this._newestIndex,
-        deletedData;
- 
-    if (oldestIndex !== newestIndex) {
-        deletedData = this._storage[oldestIndex];
-        delete this._storage[oldestIndex];
-        this._oldestIndex++;
- 
-        return deletedData;
-    }
-};
-
-
-
-
-// function fibonach(data,mode){
-//     try{
-//         n = parseInt(data);
-//         if(isNaN(n)) throw "not a number";
-//         if(!mode && n>30) {
-//             label_out.innerHTML = "Слишком большое число. Загляните в описание алгоритма.";
-//             return;
-//         }
-
-//         if (n==1){
-//             label_out.innerHTML = 0; 
-//             return;
-//         }
-//         if (n==2){
-//             label_out.innerHTML = 1; 
-//             return;
-//         }
-//         var x = 0, y = 1;
-//         for(var i = 0; i < n-1; i ++){
-//             x = x + y;
-//             if (mode) x%=10;
-//             x^=y;
-//             y^=x;
-//             x^=y;
-//         }
-//         label_out.innerHTML = x; 
-//     } catch(e){
-//         label_out.innerHTML = "Некорректный ввод.";
-//         return;
-//     }
-// }
-
-
-
-
-// const memoize = (fn) => {
-//     let dict = {};
-//     return (...args) => {
-//       let n = args[0];
-//       if (n in dict) {
-//         console.log('Восстановлено из словаря', n);
-//         label_out.innerHTML = dict[n]; 
-//         return dict[n];
-//       }
-//       else {
-//         console.log('Посчитано', n);
-//         let result = fn(n);
-//         dict[n] = result;
-        
-//         label_out.innerHTML = result; 
-//         return result;
-//       }
-//     }
-//   }
-  
-  // const fibonach = memoize(
-  //   (data, mode) => {
-  //       let nums = data.split(' ');
-  //       n = parseInt(nums[0]);
-
-  //       if (n==1){
-  //           label_out.innerHTML = 0; 
-  //           return 0;
-  //       }
-  //       if (n==2){
-  //           label_out.innerHTML = 1; 
-  //           return 1;
-  //       }
-  //       var x = 0, y = 1;
-  //       for(var i = 0; i < n-1; i ++){
-  //           x = x + y;
-  //           if (mode) x%=10;
-  //           x^=y;
-  //           y^=x;
-  //           x^=y;
-  //       }
-  //       return x; 
-  //   }
-  // );
-
-
-
