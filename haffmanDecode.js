@@ -2,10 +2,9 @@ function haffmanDecode(data) {
     try {
         var str = data.toString().split('\n');
 
-        if (isNaN(str[0].split(' ')[0] || isNaN(str[0].split(' ')[1]))) throw "Символы в первой строке не являются целыми числами";
-
         var cntOfSmbl = parseInt(str[0].split(' ')[0]);
         var strLen = parseInt(str[0].split(' ')[1]);
+        if (isNaN(cntOfSmbl) || isNaN(strLen)) throw "Символы в первой строке не являются целыми числами";
         var codeStr = str[cntOfSmbl + 1];
         if (!codeStr) throw "Символов меньше, чем указано на первой строке";
 

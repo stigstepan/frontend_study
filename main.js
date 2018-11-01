@@ -29,6 +29,11 @@ function start() {
                 euclid(label_in.value);
             }
             break;
+        case "FibonachHard":
+            {
+                fibonachHard(label_in.value);
+            }
+            break;
         case "Segments":
             {
                 segments(label_in.value);
@@ -58,6 +63,13 @@ function select_item() {
                 help.innerHTML = "1 режим: Дано целое число 1≤n≤30, необходимо вычислить n-е число Фибоначчи.\n2 режим: Дано число 1≤n≤10^7, необходимо найти последнюю цифру n-го числа Фибоначчи.";
                 enableStartButton(false);
                 algoritmName.innerHTML = "Числа Фибоначчи.";
+            }
+            break;
+        case "FibonachHard":
+            {
+                label_in.value = "10 2";
+                help.innerHTML = "Даны целые числа 1≤n≤10^18 и 2≤m≤10^5, необходимо найти остаток от деления n-го числа Фибоначчи на m.";
+                algoritmName.innerHTML = "Числа Фибоначчи с остатком.";
             }
             break;
         case "Euclid":
