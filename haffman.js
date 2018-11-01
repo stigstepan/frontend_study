@@ -73,7 +73,7 @@ function haffman(data) {
     // Output
     label_out.innerHTML = len + ' ' + codeStr.length + '<br \/>';
     for (i in codes) {
-        label_out.innerHTML += codes[i].symbol + ': ' + codes[i].code+ '<br \/>';
+        label_out.innerHTML += codes[i].symbol + ': ' + codes[i].code + '<br \/>';
     }
     label_out.innerHTML += codeStr;
 

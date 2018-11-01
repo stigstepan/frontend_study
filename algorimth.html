@@ -1,15 +1,16 @@
 <!DOCTYPE HTML>
 <html>
- <head>
+
+<head>
     <link rel="shortcut icon" href="../frontend_study/resources/" type="image/x-icon">
     <link href="app.css" rel="stylesheet">
-  <meta charset="utf-8">
-  <title>Stigstepan - Эффективные Алгоритмы</title>
- </head>
+    <meta charset="utf-8">
+    <title>Stigstepan - Эффективные Алгоритмы</title>
+</head>
 
- <body>
+<body>
     <div class="centerHead" style=" padding: 40px;">
-        <img alt="Stigstepan" src="../frontend_study/resources/logo.png" class = 'titleIcon'/>
+        <img alt="Stigstepan" src="../frontend_study/resources/logo.png" class='titleIcon' />
         <h1>Алгоритмы и все, что на них похоже</h1>
     </div>
 
@@ -23,14 +24,16 @@
         </div>
         <div class="course-description">
             <h2>Алгоритмы и эффективные вычисления</h2>
-            <p>Алгоритмы используются практически во всех областях computer science. На данном сайте пользователь получает возможность:</p>
+            <p>Алгоритмы используются практически во всех областях computer science. На данном сайте пользователь
+                получает возможность:</p>
             <p>— Приобрести первичное понимание задач, с которыми справляются алгоритмы.</p>
             <p>— Воспользоваться Online-сервисом для решения задача с помощью представленных алгоритмов.</p>
             <h4>Для кого:</h4>
-            <p>Сайт будет полезен всем, кто интересуется computer science и хочет понимать принципы работы алгоритмов, а также пользоваться готовыми.</p>
+            <p>Сайт будет полезен всем, кто интересуется computer science и хочет понимать принципы работы алгоритмов,
+                а также пользоваться готовыми.</p>
         </div>
-        <div style = "text-align: center; margin: 100px">
-            <h2 >Выберите алгоритм</h2>
+        <div style="text-align: center; margin: 100px">
+            <h2>Выберите алгоритм</h2>
             <select size="7" id="list" style="width:50%;">
                 <option disabled>Выбор алгоритма</option>
                 <option value="Fibonach">Числа Фибоначчи</option>
@@ -47,8 +50,8 @@
                     <h3>Поле ввода:</h3>
                     <textarea id="data-in" style="resize: none; width: 100%;" cols="50" rows="7"></textarea>
                     <input style="display:none;" type="submit" value="Запустить" id="data-submit">
-                    <input style="display:none;" id = "first_mod" type="submit" value="Запустить 1 режим" >
-                    <input style="display:none;" id = "second_mod" type="submit" value="Запустить 2 режим">
+                    <input style="display:none;" id="first_mod" type="submit" value="Запустить 1 режим">
+                    <input style="display:none;" id="second_mod" type="submit" value="Запустить 2 режим">
                 </div>
                 <div class="about">
                     <h2 id="algoritm_name">Название алгоритма:</h2>
@@ -57,20 +60,22 @@
             </div>
             <div class="answer">
                 <h2>Ответ:</h2>
-                <h4 id="data-out"></h4>
+                <h4 class="data-out" id="data-out"></h4>
             </div>
         </div>
     </div>
 
     <script src="fibonach.js"></script>
     <script src="haffman.js"></script>
+    <script src="haffmanDecode.js"></script>
     <script src="segments.js"></script>
     <script src="euclid.js"></script>
     <script src="main.js"></script>
     <script src="backpack.js"></script>
     <script src="terms.js"></script>
     <script src="helper.js"></script>
-    
 
- </body>
+
+</body>
+
 </html>

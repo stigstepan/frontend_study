@@ -1,14 +1,20 @@
-function createWin(str){
+function createWin(str) {
     //в зависимости от стр работаем
-    switch (str){
-        case 'Author':{
+    switch (str) {
+        case 'Author':
+            {
 
-        }break;
-        case 'Algoritms':{
+            }
+            break;
+        case 'Algoritms':
+            {
 
-        }break;
-        case 'Site':{
+            }
+            break;
+        case 'Site':
+            {
 
-        }break;
+            }
+            break;
     }
 }

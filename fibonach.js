@@ -1,31 +1,31 @@
-
-function fibonach(data,mode){
-    try{
+function fibonach(data, mode) {
+    try {
         n = parseInt(data);
-        if(isNaN(n)) throw "not a number";
-        if(!mode && n>30) {
+        if (isNaN(n)) throw "not a number";
+        if (!mode && n > 30) {
             label_out.innerHTML = "Слишком большое число. Загляните в описание алгоритма.";
             return;
         }
 
-        if (n==1){
-            label_out.innerHTML = 0; 
+        if (n == 1) {
+            label_out.innerHTML = 0;
             return;
         }
-        if (n==2){
-            label_out.innerHTML = 1; 
+        if (n == 2) {
+            label_out.innerHTML = 1;
             return;
         }
-        var x = 0, y = 1;
-        for(var i = 0; i < n-1; i ++){
+        var x = 0,
+            y = 1;
+        for (var i = 0; i < n - 1; i++) {
             x = x + y;
-            if (mode) x%=10;
-            x^=y;
-            y^=x;
-            x^=y;
+            if (mode) x %= 10;
+            x ^= y;
+            y ^= x;
+            x ^= y;
         }
-        label_out.innerHTML = x; 
-    } catch(e){
+        label_out.innerHTML = x;
+    } catch (e) {
         label_out.innerHTML = "Некорректный ввод.";
         return;
     }

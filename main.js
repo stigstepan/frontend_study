@@ -122,7 +122,8 @@ function start_2mod() {
             break;
         case "Haffman":
             {
-                haffman(label_in.value);
+                if(label_out.innerHTML == 'Нажмите кнопку запуска алгоритма.') label_in.value = '4 14\na: 0\nb: 10\nc: 110\nd: 111\n01001100100111';
+                haffmanDecode(label_in.value);
             }
     }
 }

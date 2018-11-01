@@ -1,49 +1,57 @@
+body {
+    background: url('..\\frontend_study\\resources\\background.jpg');
+}
 
- body { background: url('..\\frontend_study\\resources\\background.jpg') no-repeat; }
-
- .center {
-    width: 60%; 
-    margin: auto; 
-    background: #ffffff; 
+.center {
+    width: 60%;
+    margin: auto;
+    background: #ffffff;
     padding: 40px;
 }
 
 .centerHead {
-    width: 60%; 
-    margin: auto; 
-}   
-.menuItem{
-    margin-right: 5px; /* Отступ слева */
-    padding: 3px; /* Поля вокруг текста */
+    width: 60%;
+    margin: auto;
+}
+
+.menuItem {
+    margin-right: 5px;
+    /* Отступ слева */
+    padding: 3px;
+    /* Поля вокруг текста */
     float: right;
     font-size: 100%;
     font-family: 'Times New Roman';
     padding: 5px;
-} 
+}
 
 
-.about{
+.about {
     width: 45%;
     float: left;
 }
 
-.input_start{
+.input_start {
     width: 45%;
     float: right;
 }
 
-.answer{
-    width:70%;
+.answer {
+    width: 70%;
     clear: both;
 
 }
 
-h1{
+h1 {
     color: white;
-    font-family:'colonna mt';
+    font-family: 'colonna mt';
 }
 
-.titleIcon{
-    width:200px;
+.titleIcon {
+    width: 200px;
     min-width: 100px;
+}
+
+.data-out{
+    word-wrap: break-word;
 }
