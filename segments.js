@@ -31,7 +31,4 @@ function segments(data) {
         label_out.innerHTML = "Некорректный ввод.";
         return;
     }
-
-
-
 }
