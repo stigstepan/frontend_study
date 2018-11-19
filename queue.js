@@ -1,5 +1,3 @@
-const _top = 0;
-
 function queue(data) {
     try {
         let strs = data.toString().split("\n");
@@ -25,62 +23,46 @@ function queue(data) {
 
 
 class PriorityQueue {
-    constructor(comparator = (a, b) => a > b) {
+    constructor() {
         this._heap = [];
-        this._comparator = comparator;
     }
     size() {
         return this._heap.length;
     }
-    isEmpty() {
-        return this.size() == 0;
-    }
-    peek() {
-        return this._heap[_top];
-    }
-    push(...values) {
-        values.forEach(value => {
-            this._heap.push(value);
-            this._siftUp();
-        });
-        return this.size();
+    push(value) {
+        this._heap.push(parseInt(value));
+        this._siftUp();
     }
     pop() {
-        const poppedValue = this.peek();
+        const poppedValue = this._heap[0];
         const bottom = this.size() - 1;
-        if (bottom > _top) {
-            this._swap(_top, bottom);
+        if (bottom > 0) {
+            this._swap(0, bottom);
         }
         this._heap.pop();
         this._siftDown();
         return poppedValue;
     }
-    replace(value) {
-        const replacedValue = this.peek();
-        this._heap[_top] = value;
-        this._siftDown();
-        return replacedValue;
-    }
     _greater(i, j) {
-        return this._comparator(this._heap[i], this._heap[j]);
+        return this._heap[i] > this._heap[j];
     }
     _swap(i, j) {
         [this._heap[i], this._heap[j]] = [this._heap[j], this._heap[i]];
     }
     _siftUp() {
         let node = this.size() - 1;
-        while (node > _top && this._greater(node, parent(node))) {
+        while (node > 0 && this._greater(node, parent(node))) {
             this._swap(node, parent(node));
             node = parent(node);
         }
     }
     _siftDown() {
-        let node = _top;
+        let node = 0;
         while (
             (left(node) < this.size() && this._greater(left(node), node)) ||
             (right(node) < this.size() && this._greater(right(node), node))
         ) {
-            let maxChild = (right(node) < this.size() && this._greater(right(node), left(node))) ? right(node) : left(node);
+            let maxChild = (this._greater(right(node), left(node))) ? right(node) : left(node);
             this._swap(node, maxChild);
             node = maxChild;
         }
@@ -88,13 +70,13 @@ class PriorityQueue {
 }
 
 function parent(i) {
-    return ((i + 1) >>> 1) - 1;
+    return Math.floor((i - 1) / 2);
 }
 
 function left(i) {
-    return (i << 1) + 1;
+    return (i * 2) + 1;
 }
 
 function right(i) {
-    return (i + 1) << 1;
+    return (i * 2) + 2;
 }

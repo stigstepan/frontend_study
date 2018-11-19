@@ -54,6 +54,11 @@ function start() {
                 queue(label_in.value);
             }
             break;
+        case "BinarySearch":
+            {
+                binarySearch(label_in.value);
+            }
+            break;
     }
 }
 
@@ -118,6 +123,13 @@ function select_item() {
                 label_in.value = "6\nInsert 200\nInsert 10\nExtractMax\nInsert 5\nInsert 500\nExtractMax";
                 help.innerHTML = "Первая строка входа содержит число операций 1≤n≤10^5. Каждая из последующих n строк задают операцию одного из следующих двух типов:<br \/>\nInsert x, где 0≤x≤10^9 — целое число;<br \/>ExtractMax.";
                 algoritmName.innerHTML = "Очередь с приоритетом.";
+            }
+            break;
+            case "BinarySearch":
+            {
+                label_in.value = "5 1 5 8 12 13\n5 8 1 23 1 11";
+                help.innerHTML = "В первой строке даны целое число 1≤n≤105 и массив A[1…n] из n различных натуральных чисел, не превышающих 10^9, в порядке возрастания, во второй — целое число 1≤k≤10^5 и k натуральных чисел b1,…,bk, не превышающих 10^9. Для каждого i от 1 до k необходимо вывести индекс 1≤j≤n, для которого A[j]=bi, или −1, если такого j нет.";
+                algoritmName.innerHTML = "Двоичный поиск.";
             }
             break;
     }
