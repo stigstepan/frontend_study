@@ -1,20 +1,18 @@
-function createWin(str) {
-    //в зависимости от стр работаем
-    switch (str) {
-        case 'Author':
-            {
+var script = document.createElement('script');
 
-            }
-            break;
-        case 'Algoritms':
-            {
+script.type = 'text/javascript';
 
-            }
-            break;
-        case 'Site':
-            {
+script.src = 'http://code.jquery.com/jquery-1.8.3.js';
 
-            }
-            break;
-    }
+document.head.appendChild(script);
+
+
+function showAbout() {
+    $('html, body').animate({scrollTop: 940},500);
+    return false;
+}
+
+function up() {
+    $('html, body').animate({scrollTop: 0},500);
+    return false;
 }

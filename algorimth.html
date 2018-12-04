@@ -4,69 +4,113 @@
 <head>
     <link rel="shortcut icon" href="../frontend_study/resources/" type="image/x-icon">
     <link href="app.css" rel="stylesheet">
+    <!-- <link href="reset.css" rel="stylesheet"> -->
     <meta charset="utf-8">
-    <title>Stigstepan - Эффективные Алгоритмы</title>
+    <title>Stigstepan - Effective algorithms</title>
+    <link rel="shortcut icon" href="resources/icon.png" type="image/x-icon" />
 </head>
 
 <body>
-    <div class="centerHead" style=" padding: 40px;">
-        <img alt="Stigstepan" src="../frontend_study/resources/logo.png" class='titleIcon' />
-        <h1>Алгоритмы и все, что на них похоже</h1>
-    </div>
+    <header>
 
-    <div class="center">
-        <div>
-            <a href="https://vk.com/stigstepan" class="menuItem">Мой ВК</a>
-            <a href="https://www.instagram.com/stigstepan" class="menuItem">Мой инстаграм</a>
-            <a href="#" onclick="createWin('Author');" class="menuItem">Автор</a>
-            <a href="#" onclick="createWin('Algoritms');" href="" class="menuItem">Об алгоритмах</a>
-            <a href="" href="#" onclick="createWin('Site');" class="menuItem">О сайте</a>
-        </div>
-        <div class="course-description">
-            <h2>Алгоритмы и эффективные вычисления</h2>
+        <nav class="main-nav">
+            <ul class="main-menu-list">
+                <li class="main-menu-item">
+                    <a href="#" onclick="return up()">Home</a>
+                </li>
+                <li class="main-menu-item">
+                    <a href="#" onclick="return showAbout()" type="button">About</a>
+                </li>
+                <li class="main-menu-item">
+                    <a href="https://www.instagram.com/stigstepan">Blog</a>
+                </li>
+                <li class="main-menu-item">
+                    <a href="https://vk.com/stigstepan">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <h2>Algoritmths and something about it..</h2>
+    </header>
+
+    <div class="about grid" id='about-grid-id'>
+
+        <div class="left">
+
+            <h3>Алгоритмы и эффективные вычисления</h3>
             <p>Алгоритмы используются практически во всех областях computer science. На данном сайте пользователь
                 получает возможность:</p>
             <p>— Приобрести первичное понимание задач, с которыми справляются алгоритмы.</p>
             <p>— Воспользоваться Online-сервисом для решения задача с помощью представленных алгоритмов.</p>
-            <h4>Для кого:</h4>
-            <p>Сайт будет полезен всем, кто интересуется computer science и хочет понимать принципы работы алгоритмов,
+            <h5>Для кого:</h5>
+            <p>Сайт будет полезен всем, кто интересуется computer science и хочет понимать принципы работы
+                алгоритмов,
                 а также пользоваться готовыми.</p>
+
         </div>
-        <div style="text-align: center; margin: 100px">
-            <h2>Выберите алгоритм</h2>
-            <select size="10" id="list" style="width:50%;">
-                <option disabled>Выбор алгоритма</option>
-                <option value="Fibonach">Числа Фибоначчи</option>
-                <option value="FibonachHard">Числа Фибоначчи с остатком</option>
-                <option value="Euclid">Алгоритм Евклида</option>
-                <option value="Segments">Покрытие отрезков</option>
-                <option value="Backpack">Наполнение рюкзака</option>
-                <option value="Terms">Поиск различных слагаемых</option>
-                <option value="Haffman">Кодирование Хаффмана</option>
-                <option value="Queue">Очередь с приоритетом</option>
-                <option value="BinarySearch">Двоичный поиск</option>
-            </select>
-        </div>
-        <div style="display:none;" id='afterChoosing'>
-            <div>
-                <div class="input_start">
-                    <h3>Поле ввода:</h3>
-                    <textarea id="data-in" style="resize: none; width: 100%;" cols="50" rows="7"></textarea>
-                    <input style="display:none;" type="submit" value="Запустить" id="data-submit">
-                    <input style="display:none;" id="first_mod" type="submit" value="Запустить 1 режим">
-                    <input style="display:none;" id="second_mod" type="submit" value="Запустить 2 режим">
-                </div>
-                <div class="about">
-                    <h2 id="algoritm_name">Название алгоритма:</h2>
-                    <h4 id="about_algoritm">Описание алгоритма</h4>
-                </div>
-            </div>
-            <div class="answer">
-                <h2>Ответ:</h2>
-                <h4 class="data-out" id="data-out"></h4>
-            </div>
-        </div>
+
+        <img src="resources/about.jpg" alt="Example" class="right grid">
+
+
     </div>
+
+
+
+
+    <h4>All you need..</h4>
+
+    <div class="algoritmths grid">
+
+        <a class="algoritmths-item grid">
+            <div class="algoritmths-content grid">
+                <div>
+                    <h6>Выберите алгоритм</h6>
+                    <select size="10" id="list" style="width:50%;">
+                        <option disabled>Выбор алгоритма</option>
+                        <option value="Fibonach">Числа Фибоначчи</option>
+                        <option value="FibonachHard">Числа Фибоначчи с остатком</option>
+                        <option value="Euclid">Алгоритм Евклида</option>
+                        <option value="Segments">Покрытие отрезков</option>
+                        <option value="Backpack">Наполнение рюкзака</option>
+                        <option value="Terms">Поиск различных слагаемых</option>
+                        <option value="Haffman">Кодирование Хаффмана</option>
+                        <option value="Queue">Очередь с приоритетом</option>
+                        <option value="BinarySearch">Двоичный поиск</option>
+                    </select>
+                </div>
+                <div style="display:none;" id='afterChoosing'>
+                    <div>
+                        <div class="input_start">
+                            <h6>Поле ввода:</h6>
+                            <textarea id="data-in" style="resize: none; width: 100%;" cols="50" rows="7"></textarea>
+                            <input style="display:none;" type="submit" value="Запустить" id="data-submit">
+                            <input style="display:none;" id="first_mod" type="submit" value="Запустить 1 режим">
+                            <input style="display:none;" id="second_mod" type="submit" value="Запустить 2 режим">
+                        </div>
+                        <div class="aboutAlg">
+                            <h6 id="algoritm_name">Название алгоритма:</h6>
+                            <h5 id="about_algoritm">Описание алгоритма</h5>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <h6>Ответ:</h6>
+                        <h5 class="data-out" id="data-out"></h5>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+
+    </div>
+
+
+
+    <footer>
+
+        <h6>MAKE EACH DAY YOUR <span>STIGSTEPAN</span> </h6>
+        <h7>2018<br>~©~</h7>
+
+    </footer>
+
 
     <script src="fibonach.js"></script>
     <script src="fibonachHard.js"></script>

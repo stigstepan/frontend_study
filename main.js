@@ -17,10 +17,6 @@ var label_in = document.getElementById('data-in');
 var help = document.getElementById('about_algoritm');
 var algoritmName = document.getElementById('algoritm_name');
 
-// import {euclid} from "./euclid.js";
-// import {fibonach} from "./fibonach";
-
-
 function start() {
     let alg = list.options[list.selectedIndex].value;
     switch (alg) {
@@ -175,3 +171,4 @@ function enableStartButton(mode) {
         start_button.style.display = 'block';
     }
 }
+

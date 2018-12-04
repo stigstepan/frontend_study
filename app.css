@@ -1,11 +1,265 @@
 body {
-    background: url('..\\frontend_study\\resources\\background.jpg');
+    margin: 0;
+    background: url(../frontend_study/resources/background.jpg);
 }
 
-.center {
+header {
+    display: grid;
+    background: url(../frontend_study/resources/507.jpg) no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+.grid {
+    display: grid;
+}
+
+header::before {
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #293A43;
+    opacity: .70;
+
+}
+
+nav {
+
+    display: grid;
+    justify-self: center;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+    margin: 0 auto;
+
+}
+
+
+.main-menu-list {
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.main-menu-item {
+    margin: 0 20px 0 0;
+}
+
+nav ul li a {
+    padding: 20px;
+    font-family: "Roboto";
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
+    font-size: 25px;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+
+    z-index: 1;
+    color: #fff;
+    position: absolute;
+    font-size: 60px;
+    font-family: InroRegular, sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    align-self: center;
+    justify-self: center;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1);
+
+}
+
+.about {
+
+    /* display: none; */
+    padding: 80px 0;
+    background-color: #EDEDED;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.left {
+    font-size: 18px;
+    padding: 60px;
+    font-family: RalewayRegular, sans-serif;
+    line-height: 1.5;
+
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 34px;
+    font-weight: 800;
+    color: #293A43;
+    line-height: 1.2;
+    font-family: RalewayBold, sans-serif;
+
+}
+
+.right {
+    border: 2px solid #705d29;
+    width: 85%;
+}
+
+
+h4 {
+    background: linear-gradient(to top,rgb(74, 75, 136)), url(../frontend_study/resources/kirpich.jpg) repeat-x;
+    background-size: 100%;
+    padding: 40px;
+    margin: 0;
+    font-size: 34px;
+    font-weight: 600;
+    color: rgb(246, 247, 208);
+    line-height: 1.2;
+    font-family: IntroRegular, sans-serif;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+h5 {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.3;
+    margin: 0;
+    font-family: RalewayBold, sans-serif;
+    transition: color .25s ease;
+}
+
+h5:hover {
+    color: #293A43;
+}
+
+.algoritmths {
+    background: url(../frontend_study/resources/background.jpg);
+    padding: 60px;
+    grid-gap: 20px;
+
+}
+
+
+.algoritmths-item {
+    background-color:rgb(238, 238, 238) ;
+    border: 2px solid rgb(85, 125, 133);
+    text-decoration: none;
+    grid-template-rows: 0.5fr 0.5fr;
+    overflow: hidden;
+    color: #333;
+    transition: background-color .25s ease;
+}
+
+.algoritmths-item:hover {
+    background-color: rgb(212, 214, 216);
+}
+
+.algoritmths-img {
+
+    height: 80%;
+    background-size: cover;
+    background-position: center;
+    transition: transform .25s ease
+}
+
+.algoritmths-img:hover {
+    transform: scale(1.05) translateY(-6.5px);
+}
+
+
+.algoritmths-content {
+
+    padding: 25px;
+    text-align: center;
+    align-content: center;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: RalewayRegular, sans-serif;
+    color: #666;
+}
+
+
+.algoritmths-content p {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+footer {
+    padding: 60px 0;
+    background-color: #293A43;
+    text-align: center;
+    color: #4E5355;
+}
+
+h6 {
+    font-family: IntroRegular, sans-serif;
+    font-size: 22px;
+    line-height: 1.16;
+    font-weight: bold;
+}
+
+h6 span {
+    display: block;
+    color: #707476;
+    font-size: 26.8px;
+    font-family: IntroRegular, sans-serif;
+    font-weight: bold;
+}
+
+h7 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #494D50;
+    margin-top: 20px;
+    font-family: IntroRegular, sans-serif;
+    font-weight: bold;
+}
+.input_start {
+    width: 45%;
+    float: right;
+}
+
+.answer {
+    margin-top:10;
+    width: 100%;
+    clear: both;
+
+}
+.data-out {
+    word-wrap: break-word;
+} 
+.aboutAlg {
+    width: 45%;
+    float: left;
+}
+
+/* .center {
     width: 60%;
     margin: auto;
-    background: #ffffff;
+    background: #EDEDED;
     padding: 40px;
 }
 
@@ -16,11 +270,9 @@ body {
 
 .menuItem {
     margin-right: 5px;
-    /* Отступ слева */
     padding: 3px;
-    /* Поля вокруг текста */
     float: right;
-    font-size: 100%;
+    font-size: 120%;
     font-family: 'Times New Roman';
     padding: 5px;
 }
@@ -31,16 +283,7 @@ body {
     float: left;
 }
 
-.input_start {
-    width: 45%;
-    float: right;
-}
 
-.answer {
-    width: 70%;
-    clear: both;
-
-}
 
 h1 {
     color: white;
@@ -51,7 +294,16 @@ h1 {
     width: 200px;
     min-width: 100px;
 }
-
-.data-out{
-    word-wrap: break-word;
+.input_start {
+    width: 45%;
+    float: right;
 }
+
+.answer {
+    width: 70%;
+    clear: both;
+
+}
+.data-out {
+    word-wrap: break-word;
+} */

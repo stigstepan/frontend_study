@@ -1,6 +1,6 @@
 function binarySearch(data) {
     label_out.innerHTML = '';
-    var strs = data.toString().split("\n");
+    let strs = data.split("\n");
     let arr = strs[0].split(' ');
     let numArr = [];
     for (let i = 1; i < arr.length; i++) {
