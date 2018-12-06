@@ -8,11 +8,25 @@ document.head.appendChild(script);
 
 
 function showAbout() {
-    $('html, body').animate({scrollTop: 940},500);
+    $('html, body').animate({
+        scrollTop: document.documentElement.clientHeight
+    }, 500);
     return false;
 }
 
 function up() {
-    $('html, body').animate({scrollTop: 0},500);
+    $('html, body').animate({
+        scrollTop: 0
+    }, 500);
     return false;
+}
+
+window.onscroll = function () {
+    var top = window.pageYOffset || document.documentElement.scrollTop;
+    if (top < document.documentElement.clientHeight) {
+        document.getElementById('menu-id').style.backgroundColor = '';
+    } else {
+        document.getElementById('menu-id').style.backgroundColor = 'white';
+    }
+
 }
